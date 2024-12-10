@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Sarung RB Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #495057;
+            margin: 0;
+        }
+        
+        /* Container Style */
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #007BFF;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+            color: #343a40;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #495057;
+            background-color: #fff;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Payment Option Styling */
+        .payment-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+        }
+
+        .payment-option i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .payment-option label {
+            font-weight: 600;
+            font-size: 16px;
+            color: #343a40;
+        }
+
+        /* Footer Style */
+        footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 40px;
+            color: #6c757d;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: 600;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Form Pemesanan Sarung RB Gallery</h2>
+        
+        <form action="order-confirmation.html" method="POST">
+            
+            <!-- Name Field -->
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" required placeholder="Masukkan nama lengkap">
+
+            <!-- Address Field -->
+            <label for="address">Alamat Pengiriman</label>
+            <textarea id="address" name="address" rows="4" required placeholder="Masukkan alamat lengkap"></textarea>
+
+            <!-- Phone Field -->
+            <label for="phone">Nomor Telepon</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Masukkan nomor telepon">
+
+            <!-- Payment Method Section -->
+            <label for="payment">Metode Pembayaran</label>
+            <select id="payment" name="payment" required>
+                <option value="bank_transfer">Transfer Bank</option>
+                <option value="cod">Cash On Delivery</option>
+                <option value="credit_card">Kartu Kredit</option>
+            </select>
+
+            <div class="payment-options">
+                <div class="payment-option">
+                    <i class="fas fa-credit-card"></i>
+                    <label for="payment-bank">Transfer Bank</label>
+                </div>
+                <div class="payment-option">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <label for="payment-cod">Cash On Delivery</label>
+                </div>
+                <div class="payment-option">
+                    <i class="fas fa-credit-card"></i>
+                    <label for="payment-cc">Kartu Kredit</label>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Konfirmasi Pesanan</button>
+        </form>
+        
+        <!-- Footer Section -->
+        <footer>
+            <p>© 2024 Sarung Mabar | <a href="#">Kebijakan Privasi</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
